@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, ExternalLink } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const CTASection = () => {
   return (
@@ -20,9 +21,11 @@ export const CTASection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <Button variant="hero" size="xl">
-            Request Demo
-            <ArrowRight className="w-5 h-5" />
+          <Button variant="hero" size="xl" asChild>
+            <Link to="/generator">
+              Try Generator
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </Button>
           <Button variant="outline" size="lg">
             <Github className="w-5 h-5" />
