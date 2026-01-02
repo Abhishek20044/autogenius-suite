@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CodeOutput } from "@/components/CodeOutput";
+import { CarlaSimulation } from "@/components/CarlaSimulation";
 import { useCodeGenerator } from "@/hooks/useCodeGenerator";
 import { Loader2, Sparkles, Code2, FileCode, Cog } from "lucide-react";
 
@@ -139,16 +140,23 @@ Example: Create a brake control service that receives wheel speed sensor data fr
             </div>
 
             {/* Output Panel */}
-            <div className="lg:sticky lg:top-32 lg:self-start">
+            <div className="space-y-6">
               {generatedCode ? (
-                <CodeOutput
-                  code={generatedCode.code}
-                  language={generatedCode.language}
-                  filename={generatedCode.filename}
-                  explanation={generatedCode.explanation}
-                  standards={generatedCode.standards}
-                  warnings={generatedCode.warnings}
-                />
+                <>
+                  <CodeOutput
+                    code={generatedCode.code}
+                    language={generatedCode.language}
+                    filename={generatedCode.filename}
+                    explanation={generatedCode.explanation}
+                    standards={generatedCode.standards}
+                    warnings={generatedCode.warnings}
+                  />
+                  <CarlaSimulation
+                    code={generatedCode.code}
+                    language={generatedCode.language}
+                    componentType={componentType}
+                  />
+                </>
               ) : (
                 <div className="glass rounded-xl p-12 text-center">
                   <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center mx-auto mb-4">
