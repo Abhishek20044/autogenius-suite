@@ -51,8 +51,8 @@ export const CarlaSimulation = ({ code, language, componentType }: CarlaSimulati
 
   // Simulation step progression
   useEffect(() => {
-    if (!isRunning || currentStep >= steps.length) {
-      if (currentStep >= steps.length) setIsRunning(false);
+    if (!isRunning || currentStep >= initialSteps.length) {
+      if (currentStep >= initialSteps.length) setIsRunning(false);
       return;
     }
 
@@ -61,6 +61,7 @@ export const CarlaSimulation = ({ code, language, componentType }: CarlaSimulati
       idx === currentStep ? { ...step, status: "running" } : step
     ));
 
+    const stepDuration = initialSteps[currentStep]?.duration || 1000;
     const timer = setTimeout(() => {
       // Mark step as passed (95% pass rate for demo)
       const passed = Math.random() > 0.05;
@@ -68,10 +69,10 @@ export const CarlaSimulation = ({ code, language, componentType }: CarlaSimulati
         idx === currentStep ? { ...step, status: passed ? "passed" : "failed" } : step
       ));
       setCurrentStep(prev => prev + 1);
-    }, steps[currentStep].duration);
+    }, stepDuration);
 
     return () => clearTimeout(timer);
-  }, [isRunning, currentStep, steps]);
+  }, [isRunning, currentStep]);
 
   // Frame counter and vehicle movement
   useEffect(() => {
