@@ -44,19 +44,12 @@ export const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {isHomePage ? (
-              <>
-                <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Features
-                </a>
-                <a href="#workflow" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Workflow
-                </a>
-                <a href="#simulation" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Simulation
-                </a>
-              </>
-            ) : (
+            {isHomePage && (
+              <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Features
+              </a>
+            )}
+            {!isHomePage && (
               <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Home
               </Link>
