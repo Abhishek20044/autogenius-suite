@@ -39,18 +39,16 @@ Here’s what’s inside:
 * **Tailwind config** — Styles setup
 * **`.env`** — Environment variables (probably API keys or backend URLs) ([GitHub][1])
 
-## 🧠 **What This App Is Likely For**
+## Images: 
 
-Although the README doesn’t explain the purpose, the structure suggests:
-
-✅ A **frontend UI project**
-✅ Probably uses API calls (backend) — hence `.env`
-✅ Built with **Vite + TypeScript + Tailwind**
-✅ Designed to run in a browser
-
-If it’s part of your “AutoGenius Suite,” maybe this is the interface users use to interact with your GenAI services.
-
----
+<img width="2522" height="1232" alt="Screenshot 2026-01-03 092423" src="https://github.com/user-attachments/assets/be082031-41a6-420c-b67e-522797637d8d" />
+<img width="2530" height="1220" alt="Screenshot 2026-01-03 092405" src="https://github.com/user-attachments/assets/e2821f1d-e882-4fe8-a49a-e7f238c2c286" />
+<img width="2531" height="1231" alt="Screenshot 2026-01-03 092351" src="https://github.com/user-attachments/assets/40d2c37c-d52d-4be3-af5c-244fea554667" />
+<img width="2524" height="1236" alt="Screenshot 2026-01-03 092328" src="https://github.com/user-attachments/assets/476865d3-5dcd-4a66-b542-f4e7a9ce7cbf" />
+<img width="2529" height="1218" alt="Screenshot 2026-01-03 092154" src="https://github.com/user-attachments/assets/3e8988fd-53da-4723-a8aa-2d1d72832ac3" />
+<img width="2530" height="1230" alt="Screenshot 2026-01-03 092140" src="https://github.com/user-attachments/assets/d7002b87-f717-45bf-94eb-7b05eaa318ce" />
+<img width="2524" height="1233" alt="Screenshot 2026-01-03 092121" src="https://github.com/user-attachments/assets/e7a2fc0c-b736-4d83-9601-8bc857c7bee7" />
+<img width="2535" height="1234" alt="Screenshot 2026-01-03 092103" src="https://github.com/user-attachments/assets/8a55f777-90bf-463f-b13a-25ae3b21fdf2" />
 
 ## 🛠️ **How to Run This App in VS Code**
 
